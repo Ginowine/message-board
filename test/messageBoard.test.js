@@ -43,4 +43,22 @@ describe("MessageBoard", function () {
         // Assert the transaction reverts with the expected error message
         await expect(messageBoard.postMessage(invalidMessage)).to.be.revertedWith("Message contains invalid characters");
     });
+
+    it("Should store and retrieve multiple messages", async function () {
+        const message1 = "Message 1";
+        const message2 = "Message 2";
+        const message3 = "Message 3";
+    
+        await messageBoard.postMessage(message1);
+        await messageBoard.postMessage(message2);
+        await messageBoard.postMessage(message3);
+    
+        const storedMessages = await messageBoard.getMessages();
+    
+        // Assert all three messages are stored and returned in order
+        expect(storedMessages.length).to.equal(3);
+        expect(storedMessages[0]).to.equal(message1);
+        expect(storedMessages[1]).to.equal(message2);
+        expect(storedMessages[2]).to.equal(message3);
+    });
 });

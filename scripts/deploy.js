@@ -1,20 +1,18 @@
-// const { ethers } = require("hardhat");
+const { ethers } = require("hardhat");
 
-// async function main() {
-//   // Get the contract factory
-//   const MessageBoard = await ethers.getContractFactory("MessageBoard");
+async function main() {
 
-//   // Deploy the contract
-//   const deployedContract = await MessageBoard.deploy();
-//   await deployedContract.deployed();
+    const [deployer] = await ethers.getSigners();
 
-//   // Print the contract address
-//   console.log("Contract deployed to:", deployedContract.address);
-// }
+    console.log("Deploying contracts with the account:", deployer.address);
 
-// main()
-//   .then(() => process.exit(0))
-//   .catch((error) => {
-//     console.error(error);
-//     process.exit(1);
-//   });
+    const messageBoard = await ethers.deployContract("MessageBoard");
+    console.log("Message Board contract deployed to:", await messageBoard.getAddress());
+}
+
+main()
+    .then(() => process.exit(0))
+    .catch((error) => {
+    console.error(error);
+    process.exit(1);
+    });

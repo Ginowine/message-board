@@ -1,4 +1,4 @@
-# Simple Message Boared Project
+# Simple Message Board Project
 
 This project implements a simple message board smart contract on the Ethereum blockchain, though it can be easily deployed to the ShimmerEVM. Users can post messages to the board, and anyone can view all posted messages.
 
@@ -19,10 +19,10 @@ This project implements a simple message board smart contract on the Ethereum bl
 
 # Setup
 
-1. Clone this repository.
+1. Clone this repository. [Message Board](https://github.com/Ginowine/message-board.git)
 2. Install dependencies:
 
-# Bash
+Bash
 
 `npm install`
 
@@ -30,7 +30,7 @@ This project implements a simple message board smart contract on the Ethereum bl
 
 Run the deployment script:
 
-# Bash
+Bash
 
 `npx hardhat run scripts/deploy.js`
 
@@ -40,13 +40,13 @@ This will deploy the contract to the local Hardhat network and print the deploye
 
 Run the tests:
 
-# Bash
+Bash
 
 `npx hardhat test`
 
 # Interaction
 
-====You can interact with the contract using tools like Remix or Truffle.=======
+You can interact with the contract using tools like Remix or Truffle, but we will create a UI for this project so you can easily use the UI.
 
 # Additional Notes
 

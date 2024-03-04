@@ -8,8 +8,25 @@ contract MessageBoard {
     // Array to store messages
     string[] public messages;
 
+    // Flag to indicate if the contract is currently in the process of handling a message
+    bool private _isProcessingMessage;
+
+    bool internal locked;
+
+    modifier noReentrant() {
+        require(!locked, "No re-entrancy");
+        locked = true;
+        _;
+        locked = false;
+    }
+
     // Function to post a message
-    function postMessage(string memory message) public {
+    function postMessage(string memory message) public noReentrant() {
+        // Check reentrancy
+        require(!_isProcessingMessage, "Reentrancy is not allowed");
+        // Set processing flag
+        _isProcessingMessage = true;
+
         // Check for empty message
         require(bytes(message).length > 0, "Empty message is not allowed");
 
@@ -21,6 +38,9 @@ contract MessageBoard {
 
         // Add the message to the array
         messages.push(message);
+
+        // Clear processing flag
+        _isProcessingMessage = false;
     }
 
     // Function to check for invalid characters

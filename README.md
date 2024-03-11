@@ -1,4 +1,4 @@
-# Simple Message Board Project
+# Decentralized Message Board Smart Contract
 
 This project implements a simple message board smart contract on the Ethereum blockchain, though it can be easily deployed to the ShimmerEVM. Users can post messages to the board, and anyone can view all posted messages.
 
@@ -46,14 +46,14 @@ Bash
 
 # Interaction
 
-You can interact with the contract using tools like Remix or Truffle, but we will create a UI for this project so you can easily use the UI.
+I've developed a React-based user interface specifically designed for effortless interaction with this smart contract. Feel free to clone this React UI project and start engaging with the smart contract seamlessly.
+
+[Smart Contract UI](https://github.com/Ginowine/message-board-app)
 
 # Additional Notes
 
 This is a basic example and should not be used in production without further security audits and testing.
 
-Consider using dedicated tools like Hardhat for developing and deploying smart contracts.
-
 # Contributing
 
-This project is open to contributions. Feel free to submit pull requests with improvements or additional features.
+This project is open source and I welcome contributions. Feel free to submit pull requests with improvements or additional features.

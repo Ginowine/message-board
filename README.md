@@ -1,6 +1,6 @@
 # Decentralized Message Board Smart Contract
 
-This project implements a simple message board smart contract on the Ethereum blockchain, though it can be easily deployed to the ShimmerEVM. Users can post messages to the board, and anyone can view all posted messages.
+This project deploys a straightforward smart contract for a message board on the Ethereum blockchain. Users can post messages on the board, and view all the posted messages.
 
 # Contract Functionality
 

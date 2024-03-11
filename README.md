@@ -2,7 +2,7 @@
 
 This project deploys a straightforward smart contract for a message board on the Ethereum blockchain. Users can post messages on the board, and view all the posted messages.
 
-# Contract Functionality
+## Contract Functionality
 
 - Users can post messages to the board.
 - Messages are stored on-chain and accessible to anyone.
@@ -12,12 +12,12 @@ This project deploys a straightforward smart contract for a message board on the
   - Messages cannot contain certain invalid characters.
   - The postMessage function is protected against reentrancy attacks.
 
-# Requirements
+## Requirements
 
 - Node.js and npm installed
 - Basic understanding of blockchain and smart contracts
 
-# Setup
+## Setup
 
 1. Clone this repository. [Message Board](https://github.com/Ginowine/message-board.git)
 2. Install dependencies:
@@ -26,7 +26,7 @@ Bash
 
 `npm install`
 
-# Deployment
+## Deployment
 
 Run the deployment script:
 
@@ -36,7 +36,7 @@ Bash
 
 This will deploy the contract to the local Hardhat network and print the deployed contract address.
 
-# Testing
+## Testing
 
 Run the tests:
 
@@ -44,16 +44,16 @@ Bash
 
 `npx hardhat test`
 
-# Interaction
+## Interaction
 
 I've developed a React-based user interface specifically designed for effortless interaction with this smart contract. Feel free to clone this React UI project and start engaging with the smart contract seamlessly.
 
 [Smart Contract UI](https://github.com/Ginowine/message-board-app)
 
-# Additional Notes
+## Additional Notes
 
 This is a basic example and should not be used in production without further security audits and testing.
 
-# Contributing
+## Contributing
 
 This project is open source and I welcome contributions. Feel free to submit pull requests with improvements or additional features.
